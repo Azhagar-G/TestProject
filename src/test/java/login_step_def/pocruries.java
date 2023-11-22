@@ -5,9 +5,11 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.concurrent.TimeUnit;
 
+import org.apache.velocity.runtime.parser.node.SetPropertyExecutor;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -17,8 +19,10 @@ public class pocruries {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-
-		WebDriverManager.chromedriver().setup();
+//ChromeOptions s=new ChromeOptions();
+//s.setCapability("version", 97);
+//System.setProperty("webdriver.chrome.driver","C:\\Azhaga.	r\\Java selenium\\New - from 15.12.21\\chromedriver.exe");
+	WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 		driver.get("https://www.pocruises.com/");
