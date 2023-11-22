@@ -13,8 +13,7 @@ public class FindDuplicateMap {
 	    }
 	    else
 	     AS.put(A,1);
-	     
-	     
+	       
 	     }
 	     for(Map.Entry<Character,Integer> Res:AS.entrySet()){
 	         if(Res.getValue()>1){
