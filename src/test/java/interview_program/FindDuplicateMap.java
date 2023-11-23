@@ -8,7 +8,7 @@ public class FindDuplicateMap {
 	      char[] c = str.toCharArray();
 	    Map<Character,Integer> AS=new HashMap<Character,Integer>();
 	    for(Character A:c){
-	    if(AS.containsKey(A)){
+	    if(AS.containsKey(A) && A != ' '){
 	 AS.put(A,AS.get(A)+1);
 	    }
 	    else
@@ -20,5 +20,10 @@ public class FindDuplicateMap {
 	             System.out.println( Res.getKey() +" is "+Res.getValue()+" times");
 	         }
 	   }
+	     List<Character> Ls=new ArrayList<Character>();
+	     Ls.addAll(AS.keySet());
+	     System.out.println(Ls);
+	     Collections.reverse(Arrays.asList(c));
+	     System.out.print(Ls);
 	}
 }
